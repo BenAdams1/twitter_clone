@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Twitter Login</title>
+    <style>
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+.container {
+    display: flex;
+    border: 5px solid red;
+    width: auto;
+    height: 100vh;
+}
+
+.left {
+    display: flex;
+    
+
+}
+.column {
+    color: purple;
+    display:flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    background-color: orange;
+    
+}  
+
+#userLogin-btn {
+    color: lime;
+    display: flex;
+    width: auto;
+    height: 15vh;
+}
+
+.login-btn {
+    display: flex;
+    background: royalblue;
+    color: green;
+
+}
+
+
+.signUp-btn {
+    color: green
+}
+.signUp {
+    background-color: royalblue;
+    display: flex;
+    padding: 10px;
+    /* width: auto; */
+    /* height: 85vh; */
+    /* justify-content: center;
+    align-items: center;
+    
+
+}
+
+.footer {
+    display: flex;
+    background-color: green;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+} */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Lato', sans-serif;
+}
+/* 
+html {
+    font-size: 1.0rem;
+} */
+
+body {
+    background-color: #141f27;
+}
+
+.main-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr min-content ;
+}                                           
+
+.left {
+    background-color: #1a8dc2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content div {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.left-content i {
+    font-size: large;
+    margin-right: 15px;
+}
+
+.left-content-heading {
+    font-size: 2rem;
+    padding: 10px 15px 20px 0px; 
+    display: flex;
+    margin: 10px 15px 20px 0px;
+}
+
+.middle-content i {
+    font-size: 4rem;
+    padding: 15px 15px 15px 0px;
+}
+
+.right-content-form {
+    background-color: #141f27;
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 15rem;
+    margin-right: 10rem;
+    /* border: 2px solid red; */
+    border-radius: 4px;
+}
+
+.right-content-form {
+    background-color: #141f27;
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 15rem;
+    margin-right: 10rem;
+    /* border: 2px solid lime; */
+    border-radius: 4px;
+}
+
+.right-content-form div {
+    position: relative;
+}
+
+.right-content-form input {
+    width: 20rem;
+    height: 2rem;
+    margin-right: 2rem;
+    padding: 10px 10px 10px 0px;
+}
+
+.btn-top {
+    border: 1px solid #1a8dc2;
+    background: transparent;
+    color: #1a8dc2;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.right-content-form label {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.middle-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    background-color: #141f27;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+}
+
+.middle-content i {
+    color: #1a8dc2 
+}
+
+.middle-content h1 {
+    color: #fff;
+    padding: 10px 15px 20px 0px;
+
+}
+
+.join h4 {
+    color: #fff;
+    padding: 25px 15px 15px 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.middle-content a {
+    text-decoration: none;
+}
+
+.sign-up {
+    border: 1px solid #1a8dc2;
+    background: #1a8dc2;
+    color: #fff;
+    width: 300px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer; 
+}
+
+.log-in {
+    border: 1px solid #1a8dc2;
+    background: transparent;
+    color: #1a8dc2;
+    width: 300px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.middle-sign-up {
+    background-color: #141f27;
+} 
+
+
+.middle-login {
+    background-color: #141f27;
+    padding-top: 15px;
+}
+
+.main-page-footer a {
+    text-decoration: none;
+}
+
+.main-page-footer {
+    color: #205370;
+    text-decoration: none;
+    display: inline-flex;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+    width: 100%;
+    border-top: 1px solid #000;
+    justify-content: space-between;
+    float: left;
+    padding-right: 50px;
+    padding-left: 10px;
+}   
+
+.at-twitter:before {
+    content: ' \0040';
+}
+
+</style>
+</head>
+<body>
+
+    <!-- MAIN PAGE -->
+    <section class="main-page">
+        
+        
+        <!-- LEFT SIDE -->
+        <div class="left">
+            <div class="left-content">
+                <div>
+                    <i class="fas fa-search"></i>
+                    <h3 class="left-content-heading">Follow your interests.</h3>
+                </div>
+                <div>
+                    <i class="fas fa-user-friends"></i>
+                    <h3 class="left-content-heading">Hear what people are talking about.</h3>
+                </div>
+                <div>
+                    <i class="far fa-comment"></i>
+                    <h3 class="left-content-heading">Join the conversation.</h3>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- RIGHT SIDE -->
+        <div class="right">
+            <div class="right-content">
+                <form class="right-content-form">
+                    <input type="text"  class="user-info" placeholder="Phone, email, or username"/>
+                    <div>
+                        <input type="text" class="password" placeholder="password">
+                        <label>Forgot password?</label>
+                    </div>
+                    <a href="./newsFeed.html">   
+                    <button type="button" class="btn-top">Log in</button>
+                </form>
+
+                <div class="middle-content">
+                    <i class="fab fa-twitter"></i>
+                    <h1>See what's happening in the world right now.</h1>
+                    
+                    <div class="join">
+                        <h4>Join Twitter Today.</h4>
+                    </div>
+                    
+                   <div class="middle-sign-up">
+                        <a href="./signUp.html">
+                        <button type="button" class="sign-up">Sign Up</button>
+                    </div>
+
+                   <div class="middle-login">
+                        <a href="./newsFeed.html">                        
+                        <button type="button" class="log-in">Log in</button>
+                   </div>
+                </div>
+           </div>
+        </div>
+    
+    
+    </section>
+    <footer class="main-page-footer">
+        <p>About</p>
+        <p>Help Center</p>
+        <p>Blog</p>
+        <p>Status</p>
+        <p>Jobs</p>
+        <p>Terms</p>
+        <p>Privacy Policy</p>
+        <p>Cookies</p>
+        <p>Ads info</p>
+        <p>Brand</p>
+        <p>Apps</p>
+        <p>Advertise</p>
+        <!-- <p>Marketing</p> -->
+        <!-- <p>Businesses</p> -->
+        <p>Developers</p>
+        <!-- <p>Directory</p> -->
+        <!-- <p>Settings</p> -->
+        <!-- <p>Settings</p> -->
+        <p class="at-twitter">2019 Twitter</p>
+
+</footer>
+
+
+
+
+
+
+<!-- <div class="container"> -->
+    
+        
+    <!-- Left Side of Landing Page -->
+    <!-- <div class="row">
+        <div class="column">
+            <div class="intro"></div>
+                <span><p>Follow your interests.</p></span>
+                <span><p>Hear what people are talking about.</p></span>
+                <span><p>Join the conversation.</p></span>
+            </div>
+        </div>
+        <div class="right">
+            <div id="login">
+                <form action="login">
+                    <input type="email" placeholder="Phone, email, or username" required><br><br>
+                    <input type="password" placeholder="Password" required>
+                    <p>Forgot password?</p>
+                </form>
+                <button id="userLogin-btn">Log in</button>
+            </div>
+            <div class="signUp">
+                <h1>See what's happening in the world right now</h1>
+                <h5>Join Twitter today.</h5>
+                <button class="signUp-btn" type="button">Sign Up</button>
+                <button class="login-btn" type="button">Login in</button>
+            </div>
+
+
+    </div> -->
+ 
+    
+    <!-- Login -->
+    <!-- <div class="right">
+        <div id="login">
+            <form action="login">
+                <input type="email" placeholder="Phone, email, or username" required><br><br>
+                <input type="password" placeholder="Password" required>
+                <p>Forgot password?</p>
+            </form>
+            <button id="userLogin-btn">Log in</button>
+        </div> -->
+    
+        <!-- Main Sign Up/Log in -->
+        <!-- <div class="signUp">
+            <h1>See what's happening in the world right now</h1>
+            <h5>Join Twitter today.</h5>
+            <button class="signUp-btn" type="button">Sign Up</button>
+            <button class="login-btn" type="button">Login in</button>
+        </div>
+    
+    </div> -->
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
